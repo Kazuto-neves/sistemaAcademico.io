@@ -4,9 +4,9 @@ const LOGIN = document.getElementById("login");
 const PASS = document.getElementById("password");
 const TBODY = document.getElementById("tbody");
 
-async function span(msg){
+async function span(msg) {
     let span = document.getElementById("checkExist");
-    span.innerText=msg;
+    span.innerText = msg;
 }
 
 const CONSULTAR = async () => {
@@ -30,7 +30,7 @@ async function clogin(tipo, rota) {
         if (JSON[0].senha === PASS.value) console.log("logado como professor");
         else console.log("senha invalida");
         return JSON[0].id_professor;
-    }else{
+    } else {
         span("aluno");
         if (JSON[0].senha === PASS.value) console.log("logado como aluno");
         else console.log("senha invalida");
@@ -42,29 +42,19 @@ async function listar() {
     const DATA = await fetch(RPROF);
     const JSON = await DATA.json();
     console.log('click');
-    event.preventDefault();
-    for (let i = 0; i < JSON.length; i++) {
-        const TR = document.createElement('tr');
-        TR.classList.add('row');
-        const IDD = document.createElement('td');
-        IDD.innerText = JSON[0].id_professor;
-        const NOMED = document.createElement('td');
-        NOMED.innerText = JSON[i].nome;
-        const DATAD = document.createElement('td');
-        DATAD.innerText = JSON[i].data_nascimento;
-        const EMAILD = document.createElement('td');
-        EMAILD.innerText = JSON[i].email;
-        const SENHAD = document.createElement('td');
-        SENHAD.innerText = JSON[i].senha;
+    // var dados = JSON.parse(RPROF);
+    JSON.forEach(function (allalunos) {
+        var row =
+                    `<tr> 
+                        <td>${allalunos.id_professor}</td>
+                        <td>${allalunos.nome}</td>
+                        <td>${allalunos.data_nascimento}</td>
+                        <td>${allalunos.email}</td>
+                        <td>${allalunos.senha}</td>
+                    </tr>`
+        TBODY.innerHTML = row;
 
-        TR.appendChild(IDD);
-        TR.appendChild(NOMED);
-        TR.appendChild(DATAD);
-        TR.appendChild(EMAILD);
-        TR.appendChild(SENHAD);
-
-        TBODY.appendChild(TR);
-    };
+    });
 }
 
 const test = async () => {
