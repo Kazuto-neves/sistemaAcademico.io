@@ -45,13 +45,13 @@ async function listar() {
     // var dados = JSON.parse(RPROF);
     JSON.forEach(function (allalunos) {
         var row =
-                    `<tr> 
-                        <td>${allalunos.id_professor}</td>
-                        <td>${allalunos.nome}</td>
-                        <td>${allalunos.data_nascimento}</td>
-                        <td>${allalunos.email}</td>
-                        <td>${allalunos.senha}</td>
-                    </tr>`
+            `<tr> 
+                <td>${allalunos.id_professor}</td>
+                <td>${allalunos.nome}</td>
+                <td>${allalunos.data_nascimento}</td>
+                <td>${allalunos.email}</td>
+                <td>${allalunos.senha}</td>
+            </tr>`
         TBODY.innerHTML = row;
 
     });
