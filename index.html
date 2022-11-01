@@ -8,7 +8,7 @@
     <title>Sistema Academico-Login</title>
 </head>
 
-<body>
+<body onload="listar()">
     <div id="container">
         <div id="form">
             <label for="login" class="lForm">login</label>
@@ -16,7 +16,7 @@
             <span id="checkExist"></span>
             <label for="password" class="lForm">senha</label>
             <input type="password" name="password" id="password">
-            <input type="button" value="Entrar" id="button">
+            <input type="button" value="Entrar" id="button" onclick="CONSULTAR(2)">
         </div>
         <table style="border:3px black solid">
         	<thead>

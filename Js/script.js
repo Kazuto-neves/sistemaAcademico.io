@@ -4,12 +4,14 @@ const LOGIN = document.getElementById("login");
 const PASS = document.getElementById("password");
 const TBODY = document.getElementById("tbody");
 
+//var Sn = "";
+
 async function span(msg) {
     let span = document.getElementById("checkExist");
     span.innerText = msg;
 }
 
-const CONSULTAR = async () => {
+async function CONSULTAR(op){
     let rota = "";
     let tipo = 0;
     if (LOGIN.value.length == 1/*melhor colocar 12*/) {
@@ -19,24 +21,33 @@ const CONSULTAR = async () => {
         rota = (RPROF + LOGIN.value);
         tipo = 1;
     }
-    rota.length != 0 ? await clogin(tipo, rota) : span("erro");
+    if(op===1){
+    	rota.length != 0 ? await spanT(tipo) : span("erro");
+    }else if(op===2){
+    	rota.length != 0 ? await clogin(tipo,rota) : span("erro");
+    }
 }
 
-async function clogin(tipo, rota) {
+async function spanT(tipo) {
+    if (tipo === 1) {
+        span("professor");
+    } else {
+        span("aluno");
+    }
+}
+
+async function clogin(tipo,rota) {
     const DATA = await fetch(rota);
     const JSON = await DATA.json();
     if (tipo === 1) {
-        span("professor");
-        if (JSON[0].senha === PASS.value) console.log("logado como professor");
+        if (JSON[0].senha === PASS.value) window.location.href = "../sistemaAcademico.io/html/Professor.html";
         else console.log("senha invalida");
-        return JSON[0].id_professor;
     } else {
-        span("aluno");
-        if (JSON[0].senha === PASS.value) console.log("logado como aluno");
+        if (JSON[0].senha === PASS.value) window.location.href = "../sistemaAcademico.io/html/Aluno.html";
         else console.log("senha invalida");
-        return JSON[0].id_aluno;
     }
 }
+
 
 async function listar() {
     const DATA = await fetch(RPROF);
@@ -52,20 +63,16 @@ async function listar() {
                 <td>${allalunos.email}</td>
                 <td>${allalunos.senha}</td>
             </tr>`
-        TBODY.innerHTML = row;
-
+        TBODY.innerHTML += row;
     });
 }
 
-const test = async () => {
-    console.log("espere");
-    let txt = (await CONSULTAR());
-    console.log("não doeu");
-    console.log(txt);
-    await listar();
+const Run = async () => {
+    let txt = (await CONSULTAR(1));
+    //await listar();
 };
 
-LOGIN.addEventListener("input", test)
+LOGIN.addEventListener("input", Run)
 
 
 
