@@ -4,10 +4,6 @@ const LOGIN = document.getElementById("login");
 const PASS = document.getElementById("password");
 const TBODY = document.getElementById("tbody");
 
-/*
-    aluno ou professor
-*/
-
 async function span(msg){
     let span = document.getElementById("checkExist");
     span.innerText=msg;
@@ -31,19 +27,13 @@ async function clogin(tipo, rota) {
     const JSON = await DATA.json();
     if (tipo === 1) {
         span("professor");
-        if (JSON[0].senha === PASS.value) {
-            console.log("logado como professor");
-        } else {
-            console.log("senha invalida");
-        }
+        if (JSON[0].senha === PASS.value) console.log("logado como professor");
+        else console.log("senha invalida");
         return JSON[0].id_professor;
     }else{
         span("aluno");
-        if (JSON[0].senha === PASS.value) {
-            console.log("logado como aluno");
-        } else {
-            console.log("senha invalida");
-        }
+        if (JSON[0].senha === PASS.value) console.log("logado como aluno");
+        else console.log("senha invalida");
         return JSON[0].id_aluno;
     }
 }
@@ -75,7 +65,6 @@ async function listar() {
 
         TBODY.appendChild(TR);
     };
-
 }
 
 const test = async () => {
