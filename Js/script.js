@@ -16,10 +16,10 @@ async function span(msg){
 const CONSULTAR = async () => {
     let rota = "";
     let tipo = 0;
-    if (LOGIN.value.length == 1) {
+    if (LOGIN.value.length == 1/*melhor colocar 12*/) {
         rota = (RALUN + LOGIN.value);
         tipo = 2;
-    } else if (LOGIN.value.length == 9) {
+    } else if (LOGIN.value.length == 9/*melhor colocar 10*/) {
         rota = (RPROF + LOGIN.value);
         tipo = 1;
     }
@@ -77,8 +77,6 @@ async function listar() {
     };
 
 }
-
-
 
 const test = async () => {
     console.log("espere");
