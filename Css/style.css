@@ -1,0 +1,55 @@
+body{
+    background-color: aquamarine;
+    margin: 0px;
+}
+
+#container{
+
+width: 110vw;
+height: 100vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+
+}
+
+#form {
+    width: 250px;
+    height: 180px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-top:10px;
+    flex-direction:column;
+    border-width: 2px;
+    border-style:solid;
+    border-color:black;
+    
+}
+    
+      
+label {
+    width: 50px;
+    height: 20px;
+    color:black;
+    margin: 10px;
+    background-color:ghostwhite;
+       
+      }
+          
+#button {
+    width: 50px;
+    height: 20px;
+    color: white;
+    background-color:lightblue;
+    color:black;
+   margin: 10px;
+   
+       
+      }
+      table{
+        visibility: collapse;
+      }
+    
