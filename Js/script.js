@@ -40,10 +40,10 @@ async function clogin(tipo,rota) {
     const DATA = await fetch(rota);
     const JSON = await DATA.json();
     if (tipo === 1) {
-        if (JSON[0].senha === PASS.value) window.location.href = "../sistemaAcademico.io/html/Professor.html";
+        if (JSON[0].senha === PASS.value) window.location.href = "../sistemaAcademico.io/html/professor.html";
         else console.log("senha invalida");
     } else {
-        if (JSON[0].senha === PASS.value) window.location.href = "../sistemaAcademico.io/html/Aluno.html";
+        if (JSON[0].senha === PASS.value) window.location.href = "../sistemaAcademico.io/html/aluno.html";
         else console.log("senha invalida");
     }
 }

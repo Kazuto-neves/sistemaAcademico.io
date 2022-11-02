@@ -1,5 +1,5 @@
-const RPROF = "http://localhost:3000/professor/get-professor";
-const RALUN = "http://localhost:3000/aluno/consultar";
+const RPROF = "http://localhost:3000/professores/consultar";
+const RALUN = "http://localhost:3000/alunos/consultar";
 const LOGIN = document.getElementById("button");
 const TBODY = document.getElementById("tbody");
 
