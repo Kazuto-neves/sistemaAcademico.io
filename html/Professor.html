@@ -11,6 +11,9 @@
 
 <body>
 	<div id="container">
+		<div id="form">
+			<input type="button" value="Pesquisar" id="button" onclick="CONSULTAR(2)">
+		</div>
 		<div id="get ALL">
 			<table style="border:3px black solid">
 				<thead>
@@ -28,6 +31,11 @@
 			</table>
 		</div>
 		<div id="get ONE">
+			<div id="form">
+				<label for="id" class="lForm">Id</label>
+				<input type="text" name="id" id="id">
+				<input type="button" value="Pesquisar" id="button" onclick="CONSULTAR(2)">
+			</div>
 			<table style="border:3px black solid">
 				<thead>
 					<tr>
