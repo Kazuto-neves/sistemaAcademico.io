@@ -1,4 +1,4 @@
-const RDIS = "http://localhost:3000/disciplina/get-disciplina";
+const RDIS = "http://localhost:3000/disciplinas/consultar";
 const TBODY = document.getElementById("tbody");
 
 
@@ -12,7 +12,7 @@ async function listar() {
             `<tr> 
                 <td>${alldisciplina.id_disciplina}</td>
                 <td>${alldisciplina.nome}</td>
-                <td>${alldisciplina.id_disciplina}</td>
+                <td>${alldisciplina.id_professor}</td>
                 <td>${alldisciplina.ativo}</td>
             </tr>` 
      TBODY.innerHTML += row;

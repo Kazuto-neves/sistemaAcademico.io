@@ -6,33 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/style.css">
-    <title>Sistema Academico-Login</title>
+    <title>Sistema Academico</title>
 </head>
 
-<body onload="listar()">
-    <div id="container">
-        <div id="form">
-            <label for="login" class="lForm">login</label>
-            <input type="text" name="login" id="login">
-            <span id="checkExist"></span>
-            <label for="password" class="lForm">senha</label>
-            <input type="password" name="password" id="password">
-            <input type="button" value="Entrar" id="button" onclick="CONSULTAR(2)">
-        </div>
-        <table style="border:3px black solid">
-        	<thead>
-        		<tr>
-        			<td>id</td>
-        			<td>nome</td>
-        			<td>Data</td>
-        			<td>email</td>
-        			<td>senha</td>
-        		</tr>
-        	</thead>
-        	<tbody id="tbody">
-        	
-        	</tbody>
-        </table>
+<body onload="listar()" class="container">
+    <div id="form" >
+        <h1>Listagem</h1>
+        <button><a href="./html/aluno.html">Aluno</button>
+        <button><a href="./html/professor.html">Professor</button>
+        <button><a href="./html/disciplinas.html">Disciplina</button>
+        <button><a href="./html/boletim.html">Boletim</button>
     </div>
     <script src="./Js/script.js"></script>
 </body>
