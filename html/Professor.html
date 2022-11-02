@@ -2,31 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Css/style.css">
-    <title>Sistema Academico-Professor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./Css/style.css">
+	<title>Sistema Academico-Professor</title>
 </head>
 
-<body onload="listar()">
-    <div id="container">
-        <table style="border:3px black solid">
-        	<thead>
-        		<tr>
-        			<td>id</td>
-        			<td>nome</td>
-        			<td>Data</td>
-        			<td>email</td>
-        			<td>senha</td>
-        		</tr>
-        	</thead>
-        	<tbody id="tbody">
-        	
-        	</tbody>
-        </table>
-    </div>
-    <script src="./Js/script.js"></script>
+<body>
+	<div id="container">
+		<div id="get ALL">
+			<table style="border:3px black solid">
+				<thead>
+					<tr>
+						<td>id</td>
+						<td>nome</td>
+						<td>Data</td>
+						<td>email</td>
+						<td>senha</td>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+
+				</tbody>
+			</table>
+		</div>
+		<div id="get ONE">
+			<table style="border:3px black solid">
+				<thead>
+					<tr>
+						<td>id</td>
+						<td>nome</td>
+						<td>Data</td>
+						<td>email</td>
+						<td>senha</td>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+
+				</tbody>
+			</table>
+		</div>
+		<div id="post">
+			<form id="form">
+				<label for="id" class="lForm">Id: </label> 					<input type="text" name="id" id="id">
+				<label for="nome" class="lForm">Nome: </label> 				<input type="text" name="nome" id="nome">
+				<label for="data" class="lForm">Data de Nacimento: </label> <input type="date" name="data" id="data" min="1900-01-01" max="2999-12-31">
+				<label for="email" class="lForm">Email: </label> 			<input type="email" name="email" id="email">
+				<label for="senha" class="lForm">Senha: </label> 			<input type="password" name="senha" id="senha">
+				<input type="submit" value="Enviar">
+			</form>
+		</div>
+	</div>
+	<script src="../Js/swegerr.js"></script>
 </body>
 
 </html>

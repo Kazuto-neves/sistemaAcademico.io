@@ -48,7 +48,6 @@ async function clogin(tipo,rota) {
     }
 }
 
-
 async function listar() {
     const DATA = await fetch(RPROF);
     const JSON = await DATA.json();
@@ -72,7 +71,7 @@ const Run = async () => {
     //await listar();
 };
 
-LOGIN.addEventListener("input", Run)
+LOGIN.addEventListener("input", Run);
 
 
 
