@@ -1,12 +1,14 @@
 body{
-    background-color: aquamarine;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom,  #74cdd1,#60bcad,#102444);
     margin: 0px;
+    width: 100vw;
+    height: 100vh;
 }
 
 #container{
 
-width: 110vw;
-height: 100vh;
+padding-top: 150px;
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -48,8 +50,29 @@ label {
    margin: 10px;
    
        
-      }
-      table{
-        visibility: collapse;
-      }
+  }
+
+.get{
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-top: 20px;
+}
+.tabela{
+
+  border:3px black solid;
+}
+.linha{
+  background-color: aliceblue;
+}
+#tbody{
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite; 
+ 
+}
+
+ 
+
     
