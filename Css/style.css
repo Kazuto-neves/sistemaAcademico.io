@@ -42,21 +42,23 @@ label {
 
 }
 
-button {
-  width: 300px;
-  height: 50px;
-  color: white;
-  background-color: lightblue;
-  color: black;
-  margin: 10px;
-
-
-}
-
 a {
   color: black;
   font-size: 20px;
   text-decoration: none;
+  width: 300px;
+  background-color: lightblue;
+  margin: 10px;
+  text-align: center;
+  padding: inherit;
+  border-style: groove;
+}
+
+a:hover{
+  color: #292929;
+  background-color: #4d82d6;
+  border: groove gray;
+  transition: 3s linear;
 }
 
 .get {

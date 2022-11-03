@@ -13,7 +13,7 @@ async function listar() {
                 <td>${alldisciplina.id_disciplina}</td>
                 <td>${alldisciplina.nome}</td>
                 <td>${alldisciplina.id_professor}</td>
-                <td>${alldisciplina.ativo}</td>
+                <td>${alldisciplina.ativo===0?"Desativado":"Ativado"}</td>
             </tr>` 
      TBODY.innerHTML += row;
       console.log(row);
